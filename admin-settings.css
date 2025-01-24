@@ -1,0 +1,293 @@
+.settings-section {
+    background: var(--admin-card);
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.settings-section h2 {
+    color: var(--admin-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--admin-border);
+}
+
+.settings-section h2:first-child {
+    margin-top: 0;
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: var(--admin-bg);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.settings-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--admin-border);
+    margin-bottom: 1rem;
+}
+
+.setting-info {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.setting-info h3 {
+    color: var(--admin-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.setting-info p {
+    color: var(--admin-text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Switch toggle style */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    /* Updated switch size */
+    height: 24px;
+    /* Updated switch size */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e8f0;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    /* Updated switch size */
+    width: 16px;
+    /* Updated switch size */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+.switch input:checked+.slider {
+    background-color: var(--admin-primary);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(22px);
+    /* Updated switch size */
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    --admin-bg: #1a1c23;
+    --admin-card: #2d3748;
+    --admin-text: #e2e8f0;
+    --admin-text-light: #a0aec0;
+    --admin-border: #4a5568;
+}
+
+.dark-mode .admin-sidebar {
+    background: linear-gradient(to bottom, #2d3748, #1a202c);
+}
+
+.dark-mode .stat-card {
+    background: #2d3748;
+    border-color: #4a5568;
+}
+
+.dark-mode .admin-table th {
+    background: #2d3748;
+}
+
+.dark-mode .admin-table td {
+    border-color: #4a5568;
+}
+
+.dark-mode .settings-section {
+    background: var(--admin-card);
+    border-color: var(--admin-border);
+}
+
+.dark-mode .settings-section h2 {
+    color: white;
+    border-color: var(--admin-border);
+}
+
+.dark-mode .setting-item {
+    border-color: var(--admin-border);
+}
+
+.dark-mode .settings-item {
+    background: var(--admin-card);
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 0.5rem;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: fixed;
+    /* Changed from absolute to fixed */
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.8rem;
+    background: var(--admin-card);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    /* Ensure it's above other elements */
+    cursor: pointer;
+}
+
+.theme-switch i {
+    color: var(--admin-text);
+    font-size: 1.2rem;
+}
+
+/* Ajuster la position de l'admin-user pour éviter le chevauchement */
+.admin-user {
+    position: fixed;
+    /* Adjust admin-user position */
+    top: 1.5rem;
+    /* Adjust admin-user position */
+    right: 8rem;
+    /* Positioned to the left of the theme switch */
+}
+
+/* Dark mode hover effects */
+.theme-switch:hover {
+    background: var(--admin-hover);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Dark mode hover effect */
+}
+
+.settings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: var(--admin-card);
+}
+
+.settings-table th,
+.settings-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.settings-table th {
+    background: var(--admin-bg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.settings-table td:first-child {
+    font-weight: 600;
+    width: 200px;
+    white-space: nowrap;
+}
+
+.settings-table td:nth-child(2) {
+    color: var(--admin-text-light);
+}
+
+.settings-table td:last-child {
+    width: 100px;
+    text-align: center;
+}
+
+.settings-table tr:hover {
+    background: var(--admin-hover);
+}
+
+/* Dark mode styles pour le tableau */
+.dark-mode .settings-table th {
+    background: var(--admin-secondary);
+    color: white;
+    border-color: var(--admin-border);
+}
+
+.dark-mode .settings-table td,
+.dark-mode .settings-table th {
+    color: var(--admin-text);
+    /* Texte blanc en mode sombre */
+}
+
+.dark-mode .settings-table td:first-child {
+    color: white;
+    /* Nom du paramètre en blanc */
+    font-weight: 600;
+}
+
+.dark-mode .settings-table td:nth-child(2) {
+    color: var(--admin-text-light);
+    /* Description légèrement plus claire */
+}
+
+.dark-mode .settings-table tr:hover {
+    background: var(--admin-hover);
+}
+
+.dark-mode .settings-table th {
+    background: var(--admin-secondary);
+    color: white;
+    border-color: var(--admin-border);
+}

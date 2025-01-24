@@ -1,0 +1,82 @@
+.messages-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.messages-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.message-card {
+    background: var(--admin-card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.message-card.unread {
+    border-left: 4px solid var(--admin-accent);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.message-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.message-sender {
+    font-weight: 600;
+}
+
+.message-date {
+    color: var(--admin-text-light);
+    font-size: 0.9rem;
+}
+
+.message-subject {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.message-content {
+    color: var(--admin-text-light);
+    line-height: 1.5;
+}
+
+.message-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.message-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.mark-read-btn {
+    background: var(--admin-accent);
+    color: white;
+}
+
+.delete-btn {
+    background: var(--admin-danger);
+    color: white;
+}

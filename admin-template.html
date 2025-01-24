@@ -1,0 +1,21 @@
+<!-- Ajouter dans le head de chaque page admin -->
+
+<head>
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="admin-settings.css">
+</head>
+
+<!-- Ajouter au début de admin-header-content dans chaque page -->
+<div class="admin-header-content">
+    <div class="theme-switch">
+        <i class="fas fa-moon"></i>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <!-- ...rest of header content... -->
+</div>
+
+<!-- Ajouter à la fin du body de chaque page admin -->
+<script src="admin-settings.js"></script>

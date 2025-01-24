@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - FRANXEX Admin</title>
+    <link rel="icon" type="image/x-icon" href="./FRANXEX-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin-messages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin-settings.css">
+</head>
+
+<body class="admin-body">
+    <div class="theme-switch">
+        <i class="fas fa-moon"></i>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <nav class="admin-sidebar">
+        <div class="admin-logo">
+            <i class="fas fa-code"></i>
+            FRANXEX Admin
+        </div>
+        <ul class="admin-menu">
+            <li><a href="admin-dashboard.html"><i class="fas fa-home"></i>Dashboard</a></li>
+            <li><a href="admin-users.html"><i class="fas fa-users"></i>Utilisateurs</a></li>
+            <li><a href="admin-messages.html" class="active"><i class="fas fa-envelope"></i>Messages</a></li>
+            <li><a href="admin-settings.html"><i class="fas fa-cog"></i>Paramètres</a></li>
+            <li><a href="index.html"><i class="fas fa-globe"></i>Voir le site</a></li>
+            <li><a href="#" onclick="logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>Déconnexion
+                </a></li>
+        </ul>
+    </nav>
+
+    <main class="admin-main">
+        <div class="admin-header-content">
+            <div class="admin-user">
+                <i class="fas fa-user-circle"></i>
+                <span id="adminName">Admin</span>
+            </div>
+        </div>
+
+        <div class="admin-content">
+            <div class="messages-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="messageSearch" placeholder="Rechercher un message...">
+                </div>
+                <div class="filter-controls">
+                    <select id="messageStatus">
+                        <option value="all">Tous les messages</option>
+                        <option value="unread">Non lus</option>
+                        <option value="read">Lus</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="messages-list" id="messagesList"></div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+    <script src="admin.js"></script>
+    <script src="admin-messages.js"></script>
+    <script src="darkMode.js"></script>
+    <script src="admin-settings.js"></script>
+</body>
+
+</html>

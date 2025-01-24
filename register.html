@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./FRANXEX-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscription - FRANXEX</title>
+</head>
+
+<body>
+    <a href="index.html" class="back-home">
+        <span class="arrow">←</span>
+        <span class="back-text">Retour à l'accueil</span>
+    </a>
+
+    <section id="login-page">
+        <div class="login-container register-container">
+            <h2>Créer un compte</h2>
+            <form class="login-form" id="registerForm">
+                <div class="form-group">
+                    <label for="fullname">Nom complet</label>
+                    <input type="text" id="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit">S'inscrire</button>
+                <div class="form-footer">
+                    <p>Déjà un compte ? <a href="login.html">Se connecter</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="register.js"></script>
+</body>
+
+</html>

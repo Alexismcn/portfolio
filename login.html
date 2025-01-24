@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./FRANXEX-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Connexion - FRANXEX</title>
+</head>
+
+<body>
+    <a href="index.html" class="back-home">
+        <span class="arrow">←</span>
+        <span class="back-text">Retour à l'accueil</span>
+    </a>
+
+    <nav class="navbar">
+        <!-- ...existing navbar code... -->
+    </nav>
+
+    <section id="login-page">
+        <div class="login-container">
+            <h2>Espace Membre</h2>
+            <div class="login-type-switch">
+                <button class="switch-btn active" data-type="user">Utilisateur</button>
+                <button class="switch-btn" data-type="admin">Admin</button>
+            </div>
+            <div class="login-form-container">
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group admin-code" style="display: none;">
+                        <label for="adminCode">Code Admin</label>
+                        <input type="password" id="adminCode">
+                    </div>
+                    <button type="submit">Se connecter</button>
+                    <div class="form-footer">
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                        <a href="register.html" class="register">Créer un compte</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="login.js"></script>
+</body>
+
+</html>

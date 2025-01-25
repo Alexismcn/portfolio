@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="./FRANXEX-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">FRANXEX</div>
+        <button class="mobile-menu-btn" aria-label="Menu">☰</button>
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#competences">Compétences</a></li>
@@ -33,8 +34,8 @@
                 interactives.</p>
         </div>
         <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-primary">Me contacter</a>
-            <a href="#competences" class="btn btn-secondary">Mes compétences</a>
+            <a href="#portfolio" class="btn btn-primary">Voir mes projets</a>
+            <a href="contact.html" class="btn btn-secondary">Me contacter</a>
         </div>
         <div class="features">
             <div class="feature">
@@ -74,13 +75,27 @@
                 <p>Automatisation Web</p>
             </div>
         </div>
-        <div class="cta-container">
-            <a href="contact.html" class="btn btn-primary">Travaillons ensemble</a>
-        </div>
     </section>
 
     <script src="login.js"></script>
     <script src="java.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+            this.innerHTML = this.innerHTML === '☰' ? '✕' : '☰';
+        });
+    </script>
 </body>
+
+</html>
+</body>
+
+
+</html>
 
 </html>

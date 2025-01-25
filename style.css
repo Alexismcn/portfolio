@@ -104,7 +104,12 @@ section {
 
 /* Section Accueil */
 #accueil {
+    padding: 8rem 2rem 6rem;
+    min-height: 100vh;
     background: linear-gradient(to right, #000428, #004e92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
     text-align: center;
     position: relative;
@@ -132,14 +137,14 @@ section {
     padding: 2rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    margin: 2rem auto;
+    margin: 3rem auto;
 }
 
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
     width: 100%;
     max-width: 1200px;
 }
@@ -157,7 +162,12 @@ section {
 
 /* Section Compétences */
 #competences {
+    padding: 8rem 2rem;
     background: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #competences h2 {
@@ -167,6 +177,7 @@ section {
 }
 
 .services-grid {
+    margin: 4rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
@@ -188,55 +199,17 @@ section {
     transform: scale(1.05);
 }
 
-/* Section Portfolio */
-#portfolio {
-    background: linear-gradient(to right, #000428, #004e92);
-}
-
-#portfolio h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 4rem;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    width: 100%;
-    max-width: 1400px;
-}
-
-.portfolio-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.portfolio-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.portfolio-card:hover img {
-    transform: scale(1.1);
-}
-
-.portfolio-card h3, .portfolio-card p {
-    color: white;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.8);
-}
-
 /* Boutons et CTA */
 .cta-buttons {
     margin: 2rem 0;
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+.cta-container {
+    margin-top: 4rem;
+    text-align: center;
 }
 
 .btn {
@@ -270,7 +243,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .feature {
@@ -422,18 +395,9 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
     .cta-buttons {
         flex-direction: column;
         align-items: center;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        padding: 1rem;
     }
 
     .contact-container {
@@ -443,20 +407,12 @@ section {
 
 /* Section Compétences mise à jour */
 #competences {
+    padding: 8rem 2rem;
     background: #0f172a;
-}
-
-/* Section Portfolio mise à jour */
-#portfolio {
-    background: linear-gradient(to right, #000428, #004e92);
-    color: var(--light-text);
-    margin-bottom: var(--section-gap);
-}
-
-#portfolio h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 4rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Bio Section */
@@ -466,7 +422,7 @@ section {
     padding: 2rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    margin: 2rem auto;
+    margin: 3rem auto;
 }
 
 .bio {
@@ -773,11 +729,6 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
-.portfolio-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
 .btn {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -787,5 +738,7 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
+
+/* ...rest of existing code... */
 
 /* ...rest of existing code... */

@@ -104,12 +104,7 @@ section {
 
 /* Section Accueil */
 #accueil {
-    padding: 8rem 2rem 6rem;
-    min-height: 100vh;
     background: linear-gradient(to right, #000428, #004e92);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     color: white;
     text-align: center;
     position: relative;
@@ -137,14 +132,14 @@ section {
     padding: 2rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    margin: 3rem auto;
+    margin: 2rem auto;
 }
 
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     width: 100%;
     max-width: 1200px;
 }
@@ -162,12 +157,9 @@ section {
 
 /* Section Compétences */
 #competences {
-    padding: 8rem 2rem;
     background: #0f172a;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-bottom: 0;
+    min-height: calc(100vh - 80px); /* Ajustement pour éviter l'espace vide */
 }
 
 #competences h2 {
@@ -177,7 +169,6 @@ section {
 }
 
 .services-grid {
-    margin: 4rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
@@ -199,17 +190,55 @@ section {
     transform: scale(1.05);
 }
 
+/* Section Portfolio */
+#portfolio {
+    background: linear-gradient(to right, #000428, #004e92);
+}
+
+#portfolio h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-card h3, .portfolio-card p {
+    color: white;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+}
+
 /* Boutons et CTA */
 .cta-buttons {
     margin: 2rem 0;
     display: flex;
     gap: 1rem;
     justify-content: center;
-}
-
-.cta-container {
-    margin-top: 4rem;
-    text-align: center;
 }
 
 .btn {
@@ -243,7 +272,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .feature {
@@ -395,24 +424,46 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
 
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
     .contact-container {
         grid-template-columns: 1fr;
+    }
+
+    #competences {
+        min-height: auto;
+        padding-bottom: 4rem;
     }
 }
 
 /* Section Compétences mise à jour */
 #competences {
-    padding: 8rem 2rem;
     background: #0f172a;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+
+/* Section Portfolio mise à jour */
+#portfolio {
+    background: linear-gradient(to right, #000428, #004e92);
+    color: var(--light-text);
+    margin-bottom: var(--section-gap);
+}
+
+#portfolio h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 4rem;
 }
 
 /* Bio Section */
@@ -422,7 +473,7 @@ section {
     padding: 2rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    margin: 3rem auto;
+    margin: 2rem auto;
 }
 
 .bio {
@@ -729,6 +780,11 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
+.portfolio-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
 .btn {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -738,6 +794,160 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
+
+/* ...existing code... */
+
+/* Version mobile de la navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem;
+    }
+
+    .nav-links {
+        display: none; /* Cache par défaut sur mobile */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+
+    /* Ajustements sections pour mobile */
+    section {
+        padding: 4rem 1rem;
+    }
+
+    #accueil h1 {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .headline {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
+
+    .bio-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+/* Nouvelles animations pour le menu mobile */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-links.active {
+    animation: slideDown 0.3s ease forwards;
+}
+
+/* ...rest of existing code... */
+
+/* Navbar mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: row; /* Changement important */
+        position: relative;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 /* ...rest of existing code... */
 
